@@ -1,0 +1,11 @@
+version: 1.0.{build}
+image: Visual Studio 2019
+platform:
+  - x64
+configuration: Release
+
+build_script:
+  - msbuild MySolution.sln
+
+test_script:
+  - vstest MyTests.dll
