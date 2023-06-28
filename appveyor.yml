@@ -1,11 +1,19 @@
 version: 1.0.{build}
-image: Visual Studio 2019
-platform:
-  - x64
-configuration: Release
+
+image: Ubuntu
+
+environment:
+  nodejs_version: "14"
+
+install:
+  - choco install nodejs-lts
+
+before_build:
+  - npm ci
 
 build_script:
-  - msbuild MySolution.sln
+  - npm run build
 
 test_script:
-  - vstest MyTests.dll
+  - npm test
+
