@@ -6,14 +6,13 @@ environment:
   nodejs_version: "14"
 
 install:
-  - choco install nodejs-lts
+  - npm install yarn
 
 before_build:
-  - npm ci
+  - yarn install
 
 build_script:
-  - npm run build
+  - yarn build
 
 test_script:
-  - npm test
-
+  - yarn test
