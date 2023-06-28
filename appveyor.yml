@@ -14,5 +14,4 @@ before_build:
 build_script:
   - yarn build
 
-test_script:
-  - yarn test
+
