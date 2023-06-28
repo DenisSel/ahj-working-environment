@@ -6,7 +6,7 @@ module.exports = (env, argv) => {
   const isDevelopment = argv.mode === 'development'; // Определение режима сборки на основе значения argv.mode
 
   return {
-    entry: './src/script.js', // Точка входа для JavaScript
+    entry: './script.js', // Точка входа для JavaScript
     output: {
       path: path.resolve(__dirname, 'dist'), // Путь к выходной директории
       filename: 'script.js', // Имя выходного файла JavaScript
@@ -25,7 +25,7 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/index.html', // Путь к исходному HTML-шаблону
+        template: './index.html', // Путь к исходному HTML-шаблону
         filename: 'index.html', // Имя выходного HTML-файла
       }),
       new MiniCssExtractPlugin({
